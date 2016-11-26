@@ -1,0 +1,74 @@
+<!DOCTYPE <html>
+<head>
+	<title>Simple Node Blog</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../styles/post.css">
+</head>
+<body>
+	<!-- welcome jumbotron -->
+	<div class="container">
+
+		<div class="jumbotron">
+			
+			<h1>Welcome to my Blog</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+		</div>
+	</div>
+
+	<!-- Blog post buttons -->
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-6 col-md-4">
+				<button class="btn btn-primary">New Posts</button>
+				<button class="btn btn-primary">Top Posts</button>
+				<button onClick="showPostForm()" id="createPost" class="btn btn-primary">Create Post</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- Code to show new posts -->
+
+	<!-- Code to show Top posts -->
+
+	<!-- Code to create a new post -->
+	<div class="container" id="form">
+		<div class="row">
+			<div class="col-xs-6 col-md-4" id="textbox">
+				<form>
+					<input class="form-control" id="postTitle" type="text" placeholder="Title" name="title">
+					<textarea class="form-control" id="textBox" rows="10"></textarea>
+					<button id="submitButton" class="btn btn-primary">Submit</button>
+					<button onclick="hidePostForm()" id="hidePosts" class="btn btn-primary">Hide TextBox</button>
+				</form>
+			</div>
+
+		</div>
+	</div>
+
+
+
+	<!-- scripts -->
+	<script src="https://code.jquery.com/jquery-3.1.1.js"
+	  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+	  crossorigin="anonymous">
+    </script>
+
+    <script>
+    	$(document).ready(function(){
+    		$("#postTitle").hide();
+			$("#textBox").hide();
+			$("#submitButton").hide();
+			$("#hidePosts").hide();
+		});
+	</script>
+
+    <script type="text/javascript" src="../scripts/post.js"></script>
+
+</body>
+</html>
